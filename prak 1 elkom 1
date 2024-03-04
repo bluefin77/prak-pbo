@@ -1,0 +1,19 @@
+class Penjumlahan:
+    def __init__(self):
+        self.angka1 = 0
+        self.angka2 = 0
+
+    def input_angka(self):
+        self.angka1 = float(input("Masukkan angka pertama: "))
+        self.angka2 = float(input("Masukkan angka kedua: "))
+
+    def jumlahkan(self):
+        hasil_penjumlahan = self.angka1 + self.angka2
+        return hasil_penjumlahan
+
+
+calculator = Penjumlahan()
+calculator.input_angka()
+hasil = calculator.jumlahkan()
+
+print("Hasil penjumlahan:", hasil)
