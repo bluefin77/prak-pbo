@@ -1,0 +1,43 @@
+class GradeMahasiswa:
+    def __init__(self):
+        self.nilai = 0
+        self.grade = ''
+    input("nama mahasiswa:")
+    input("nim mahasiswa:")
+    def input_nilai(self):
+        self.nilai = float(input("Masukkan nilai mahasiswa: "))
+
+    def tentukan_grade(self):
+        if 0 <= self.nilai < 40.99:
+            self.grade = 'E'
+        elif 45 <= self.nilai < 55.99:
+            self.grade = 'D'
+        elif 56 <= self.nilai < 61.99:
+            self.grade = 'C'
+        elif 62 <= self.nilai < 64.99:
+            self.grade = 'c+'
+        elif 65 <= self.nilai < 67.99:
+             self.grade = 'B-'
+        elif 68 <= self.nilai < 73.99:
+             self.grade = 'B'
+        elif 74 <= self.nilai < 76.99:
+             self.grade = 'B+'
+        elif 77 <= self.nilai < 79.99:
+             self.grade = 'A-'
+        elif 80 <= self.nilai < 100:
+             self.grade = 'A'
+        else:
+            self.grade = 'A'
+
+    def tampilkan_grade(self):
+        print("Grade mahasiswa:", self.grade)
+
+
+mahasiswa = GradeMahasiswa()
+
+mahasiswa.input_nilai()
+
+mahasiswa.tentukan_grade()
+
+
+mahasiswa.tampilkan_grade()
