@@ -1,0 +1,23 @@
+print('rafael gala herlambang (064002300036)')
+print('----PROGRAM MENAMPILKAN IDENTITAS')
+
+class Praktikan:
+    def __init__(self, nama, nim, fakultas, hobi):
+        self.nama = nama
+        self.nim = nim
+        self.fakultas = fakultas
+        self.hobi = hobi
+
+    def tampilkan_identitas(self):
+        print(f"Nama: {self.nama}")
+        print(f"NIM: {self.nim}")
+        print(f"Fakultas: {self.fakultas}")
+        print(f"Hobi: {self.hobi}")
+        print()
+def main():
+    praktikan1 = Praktikan("Rafael gala herlambang", "064002300036", "Teknik Informatika", "main apex")
+    praktikan1.tampilkan_identitas()
+
+if __name__ == "__main__":
+    main()
+
