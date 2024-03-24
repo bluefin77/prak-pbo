@@ -1,0 +1,25 @@
+class DeretanAngka:
+    def _init_(self):
+        self.nim = ""
+
+    def set_nim(self, nim):
+        if len(nim) != 2 or not nim.isdigit():
+            print("harus berupa 2 digit angka.")
+            return False
+        self.nim = nim
+        return True
+
+    def tampilkan_deret(self):
+        if not self.nim:
+            print("Masukkan NIM :")
+            return
+        print("Deret angka dari 1 sampai 50 (kecuali 2 digit terakhir dari NIM):")
+        for i in range(1, 51):
+            if str(i)[-2:] != self.nim:
+                print(i, end=" ")
+
+
+deret = DeretanAngka()
+nim = input("Masukkan 2 digit terakhir NIM Anda: ")
+if deret.set_nim(nim):
+    deret.tampilkan_deret()
