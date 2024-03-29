@@ -1,0 +1,53 @@
+class Praktikan:
+    def __init__(self, nama):
+        self.nama = nama
+
+    @staticmethod
+    def get_nim():
+        return "064002300036"
+
+    @staticmethod
+    def get_nilai():
+        return 87
+
+    def display_info(self):
+        print("-----DATA PRIBADI-----")
+        print("nama :", self.nama)
+        print("NIM :", self.get_nim())
+        print("Nilai :", self.get_nilai())
+
+class Teman:
+    def __init__(self, nama):
+        self.nama = nama
+
+    @staticmethod
+    def get_nim():
+        return "064002300029"
+
+    @staticmethod
+    def get_nilai():
+        return "78"
+
+    def display_info(self):
+        print("-----DATA TEMAN-----")
+        print("nama :", self.nama)
+        print("NIM :", self.get_nim())
+        print("Nilai :", self.get_nilai())
+
+
+
+# Fungsi untuk menyimpan output dari program
+def save_output(praktikan, teman1, teman2, teman3):
+    praktikan.display_info()
+    teman1.display_info()
+    teman2.display_info()
+    teman3.display_info()
+
+# Pembuatan objek praktikan dan teman
+praktikan = Praktikan("Rafael gala herlambang")
+teman1 = Teman("fadlu")
+teman2 = Teman("iqbal")
+teman3 = Teman("akbar")
+
+# Menyimpan dan menampilkan output dari program
+save_output(praktikan, teman1, teman2, teman3)
