@@ -1,0 +1,43 @@
+print('====================')
+print('Nama : Rafael Gala herlambang')
+print('NIM : 064002300036')
+print('====================')
+class Masyarakatkampus:
+    def __init__(self, nama):
+        self.nama = nama
+
+    def Gaji(self):
+        pass
+
+class Dosen(Masyarakatkampus):
+    def __init__(self):
+        super().__init__("Dosen")
+
+    def Gaji(self):
+        return "Golongan Dosen mendapatkan gaji: 9500000"
+
+class Karyawan(Masyarakatkampus):
+    def __init__(self):
+        super().__init__("STAFF")
+
+    def Gaji(self):
+        return "Golongan STAFF mendapatkan gaji: 78000000"
+
+class Lain(Masyarakatkampus):
+    def __init__(self):
+        super().__init__("Lain")
+
+    def Gaji(self):
+        return "Golongan Lain mendapatkan gaji: 3400000"
+
+def main():
+    dosen = Dosen()
+    karyawan = Karyawan()
+    lain = Lain()
+
+    print(dosen.Gaji())
+    print(karyawan.Gaji())
+    print(lain.Gaji())
+
+if __name__ == "__main__":
+    main()
